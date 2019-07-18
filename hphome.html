@@ -1,0 +1,168 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5shiv.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css"/>
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin"/>
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css"/>
+    <!--[if IE 6]>
+    <script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js"></script>
+    <script>DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <title>黄埔直管房系统</title>
+</head>
+<body>
+<header class="navbar-wrapper navlogo">
+    <div class="navbar navbar-fixed-top">
+        <div class="container-fluid cl">
+            <a class="navbar-logo f-l mr-10 hidden-xs">黄埔直管房系统</a>
+            <nav id="Hui-userbar" class="nav navbar-nav navbar-userbar hidden-xs">
+                <ul class="cl">
+                    <li>超级管理员</li>
+                    <li class="dropDown dropDown_hover">
+                        <a href="#" class="dropDown_A">admin <i class="Hui-iconfont">&#xe6d5;</i></a>
+                        <ul class="dropDown-menu menu radius box-shadow">
+                            <li><a href="javascript:;" onClick="myselfinfo()">个人信息</a></li>
+                            <li><a href="#">退出</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <nav id="Hui-info" class="nav navbar-nav navbar-userbar hidden-xs">
+                <p>租金月:2019年5月</p>
+            </nav>
+        </div>
+    </div>
+</header>
+<aside class="Hui-aside asideCustom">
+    <div class="menu_dropdown bk_2">
+        <dl id="menu-article">
+            <dt>房屋<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="house-list.html" data-title="房屋管理" href="javascript:void(0)">房屋管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-picture">
+            <dt>审批<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="approval-list.html" data-title="审批管理" href="javascript:void(0)">审批管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-product">
+            <dt>修缮<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="repair-list.html" data-title="修缮管理" href="javascript:void(0)">修缮管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-comments">
+            <dt>巡查<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="patrol-list.html" data-title="巡查管理" href="javascript:;">巡查管理</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-member">
+            <dt>租金<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="rent-list.html" data-title="租金管理" href="javascript:;">租金管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-admin">
+            <dt>报表<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="report-list.html" data-title="报表管理" href="javascript:void(0)">报表管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+        <dl id="menu-system">
+            <dt>系统<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d7;</i></dt>
+            <dd>
+                <ul>
+                    <li><a data-href="system-base.html" data-title="系统管理" href="javascript:void(0)">系统管理</a></li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+</aside>
+<section class="Hui-article-box sectionCustom">
+    <div id="Hui-tabNav" class="Hui-tabNav hidden-xs">
+        <div class="Hui-tabNav-wp">
+            <ul id="min_title_list" class="acrossTab cl">
+                <li class="active">
+                    <span title="我的首页" data-href="welcome.html">我的首页</span>
+                    <em></em>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="iframe_box" class="Hui-article">
+        <div class="show_iframe">
+            <div style="display:none" class="loading"></div>
+            <iframe scrolling="yes" frameborder="0" src="welcome.html"></iframe>
+        </div>
+    </div>
+</section>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="lib/jquery.contextmenu/jquery.contextmenu.r2.js"></script>
+<script type="text/javascript">
+	$(function () {
+		/*$("#min_title_list li").contextMenu('Huiadminmenu', {
+            bindings: {
+                'closethis': function(t) {
+                    console.log(t);
+                    if(t.find("i")){
+                        t.find("i").trigger("click");
+                    }
+                },
+                'closeall': function(t) {
+                    alert('Trigger was '+t.id+'\nAction was Email');
+                },
+            }
+        });*/
+	});
+	/*个人信息*/
+	function myselfinfo() {
+		layer.open({
+			type: 1,
+			area: ['300px', '200px'],
+			fix: false, //不固定
+			maxmin: true,
+			shade: 0.4,
+			title: '查看信息',
+			content: '<div>管理员信息</div>'
+		});
+	}
+</script>
+
+
+</body>
+</html>

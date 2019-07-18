@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+    <link href="css/index/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--theme-style-->
+    <link href="css/index/style.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--//theme-style-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--fonts-->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <!--//fonts-->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+		jQuery(document).ready(function ($) {
+			$(".scroll").click(function (event) {
+				event.preventDefault();
+				$('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+			});
+		});
+    </script>
+</head>
+<body>
+
+<!--header-->
+<div class="header-top">
+    <div class="class-header">
+        <p>黄埔直管房系统</p>
+    </div>
+    <div class="class-header-r">
+        <p>
+            超级管理员
+            <img src="images/hpindex/gly.png" alt="">
+        </p>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<div class="header">
+    <div class="container">
+        <div class="grid-header">
+            <div class="grid-tv grid-manage">
+                <a href="#"><img class="clock" src="images/hpindex/tv.png" alt=""/></a>
+                <h6>物业管理</h6>
+            </div>
+            <div class="grid-tv tv-portfolio">
+                <a href="#"><img class="clock" src="images/hpindex/pen.png" alt=""/></a>
+                <h6>租金管理</h6>
+            </div>
+            <div class="grid-tv grid-power">
+                <a href="#"><img class="clock" src="images/hpindex/qx.png" alt=""/></a>
+                <h6>权限管理</h6>
+            </div>
+            <div class="grid-tv grid-approve">
+                <a href="#"><img class="clock" src="images/hpindex/sp2.png" alt=""/></a>
+                <h6>审批管理</h6>
+            </div>
+            <div class="grid-tv grid-table">
+                <a href="#"><img class="clock" src="images/hpindex/bb.png" alt=""/></a>
+                <h6>报表统计</h6>
+            </div>
+            <div class="grid-tv grid-user">
+                <a href="#"><img class="clock" src="images/hpindex/yh.png" alt=""/></a>
+                <h6>用户管理</h6>
+            </div>
+            <div class="grid-tv grid-check">
+                <a href="#"><img class="clock" src="images/hpindex/xc.png" alt=""/></a>
+                <h6>巡查管理</h6>
+            </div>
+            <div class="grid-tv grid-lessee">
+                <a href="#"><img class="clock" src="images/hpindex/czr.png" alt=""/></a>
+                <h6>承租人管理</h6>
+            </div>
+            <div class="grid-tv grid-setUp">
+                <a href="#"><img class="clock" src="images/hpindex/sz.png" alt=""/></a>
+                <h6>系统设置</h6>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>
+<script>
+	$(document).ready(function () {
+		$(".top-nav li a").click(function () {
+			$(this).parent().addClass("active");
+			$(this).parent().siblings().removeClass("active");
+		});
+	});
+</script>
+<!-- script-for sticky-nav -->
+<script>
+	$(document).ready(function () {
+		var navoffeset = $(".header-home").offset().top;
+		$(window).scroll(function () {
+			var scrollpos = $(window).scrollTop();
+			if (scrollpos >= navoffeset) {
+				$(".header-home").addClass("fixed");
+			} else {
+				$(".header-home").removeClass("fixed");
+			}
+		});
+
+	});
+</script>
+<!-- /script-for sticky-nav -->
+<!--//header-->
+<!--footer-->
+<div class="footer">
+    <div class="container">
+        <p class="class-footer">主办单位:广州市黄埔区住房保障服务中心</p>
+        <p class="class-footer">承办单位:广东兰贝斯有限公司</p>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--footer-->
+
+</body>
+</html>
